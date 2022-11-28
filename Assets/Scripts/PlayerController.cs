@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 10f;
-    public float xRange = 15f;
+    private float speed = 15f;
+    private float xRange = 15f;
 
     public GameObject projectilePrefab;
 
@@ -13,11 +13,10 @@ public class PlayerController : MonoBehaviour
     //private float verticalInput;
     void Update()
     {
+        //Movimiento horizontal
         horizontalInput = Input.GetAxis("Horizontal");
-        //verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
-        PlayerInBounds();
+        PlayerInBounds();//Mantiene al player en la pantalla
         if (Input.GetKeyDown(KeyCode.Space))
         {
             FireProjectile();

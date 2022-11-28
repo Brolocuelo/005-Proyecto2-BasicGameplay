@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C728D6EF-5740-24BB-6213-A09139247BD4}</ProjectGuid>
+    <ProjectGuid>{53AE296E-939C-7280-A418-913CD75987D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\MoveForward.cs" />
+    <Compile Include="Assets\Scripts\DetectCollisions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />

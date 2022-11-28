@@ -8,6 +8,7 @@ public class MoveForward : MonoBehaviour
 
     void Update()
     {
+        //Mover pa lante con la velocidad ajustada
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }

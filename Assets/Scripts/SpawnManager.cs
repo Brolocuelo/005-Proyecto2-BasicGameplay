@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] animalPrefabs;
-    public int animalIndex;
+    public GameObject[] animalPrefabs; //Array de Animales
+    public int animalIndex; //Indice del array de animales
 
     private float spawnRangeX = 14f;
     private float spawnPosZ = 15f;
@@ -15,10 +15,11 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
+        //Llama periodicamente a la funcion SpawnRandomAnimal
         InvokeRepeating("SpawnRandomAnimal",
             startDelay, spawnInterval);
     }
- 
+    //Hace aparecer un animal aleatorio en posicion X determinada
     private void SpawnRandomAnimal()
     {
         animalIndex = Random.Range(0, animalPrefabs.Length);
@@ -26,7 +27,7 @@ public class SpawnManager : MonoBehaviour
               RandomSpawnPos(),
               animalPrefabs[animalIndex].transform.rotation);
     }
-
+    //Generamos un valor aleatoriamente para la pos en x
     private Vector3 RandomSpawnPos()
     {
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
